@@ -18,4 +18,18 @@ app.get("/search", (req, res) => {
   });
 });
 
+app.get("/header", (req, res) => {
+  const auth = req.headers.abc;
+
+  if (auth === "abc xyz") {
+    res.json({
+      msg: "auth",
+    });
+  } else {
+    res.json({
+      msg: "no auth",
+    });
+  }
+});
+
 app.listen(port);
