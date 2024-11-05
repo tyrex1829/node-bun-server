@@ -17,6 +17,13 @@ app.get("/data", (ctx) => {
   return ctx.json({ msg: "data route in node-hono server" });
 });
 
+app.get("/user/:id", (ctx) => {
+  const userId = ctx.req.param("id");
+  return ctx.json({
+    user: userId,
+  });
+});
+
 serve({
   fetch: app.fetch,
   port: port,
