@@ -2,7 +2,7 @@ import { Hono } from "hono";
 import { createServer } from "http";
 
 const app = new Hono();
-const port = 3003;
+const port = 3004;
 
 app.get("/", (ctx) => {
   return ctx.text("hello from hono server with node.js");
