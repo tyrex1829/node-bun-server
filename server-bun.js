@@ -11,7 +11,7 @@ serve({
       return new Response("404 Not Found", { status: 404 });
     }
   },
-  port: 3000,
+  port: 3001,
   hostname: "127.0.0.1",
 });
 
