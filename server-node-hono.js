@@ -13,6 +13,10 @@ app.get("/", (ctx) => {
 //   console.log(`Listening on http://localhost:${info.port}`);
 // });
 
+app.get("/data", (ctx) => {
+  return ctx.json({ msg: "data route in node-hono server" });
+});
+
 serve({
   fetch: app.fetch,
   port: port,
