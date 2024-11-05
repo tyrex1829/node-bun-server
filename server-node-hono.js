@@ -24,6 +24,10 @@ app.get("/user/:id", (ctx) => {
   });
 });
 
+const user = new Hono();
+user.get("/:id", (ctx) => ctx.text(`User: ${ctx.req.param("id")}`));
+app.route("/route", user);
+
 serve({
   fetch: app.fetch,
   port: port,
